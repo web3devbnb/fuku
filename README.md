@@ -1,6 +1,6 @@
-# Fantom PWA Explorer
+# ICICB Explorer
 
-JavaScript and Vue based Fantom pwa explorer.
+JavaScript and Vue based ICICB explorer.
 
 We are using:
 * Node / NPM
