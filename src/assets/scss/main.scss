@@ -240,6 +240,15 @@ form {
 }
 
 .space{
+
+}
+
+._search:hover{
+    border: 1px outset red!important;
+}
+
+._search:active{
+    border: 1px outset red!important;
 }
 
 ._search{
@@ -247,8 +256,39 @@ form {
     height:60px;
     border-radius: 40px;
     padding-left: 30px;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+        align-items: center;
+        align-content: center;
+
+        input, textarea {
+            color: inherit;
+            width: 100%;
+            font-family: inherit;
+            font-size: inherit;
+            background: none;
+            padding: 0;
+            border: none;
+
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+
+            &:invalid {
+                box-shadow: none;
+                outline: none;
+                border: none;
+            }
+        }
 }
 
 .btn_search{
-    padding-right:50px;
+    min-height: 2.75rem;
+    line-height: 1.2;
+    font-size: $fs-button-lg;
+    padding: $button-lg-v-padding $button-lg-h-padding;
+    border-radius: $button-lg-border-radius;
+    padding: calc(#{$button-lg-v-padding} - #{$button-border-width} - 2px) $button-lg-h-padding;
 }

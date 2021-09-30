@@ -123,7 +123,7 @@ button:not(.def):hover::after, a.btn:hover::after {
     font-size: $fs-button-lg;
     padding: $button-lg-v-padding $button-lg-h-padding;
     border-radius: $button-lg-border-radius;
-    //padding: calc(#{$button-lg-v-padding} - #{$button-border-width} - 2px) $button-lg-h-padding;
+    padding: calc(#{$button-lg-v-padding} - #{$button-border-width} - 2px) $button-lg-h-padding;
 }
 
 @include buttons('.secondary') {
@@ -133,7 +133,7 @@ button:not(.def):hover::after, a.btn:hover::after {
 }
 
 @include buttons('.light') {
-    color: $button-light-color;
+    color: red;
     border-color: $button-light-border-color;
     background: $button-light-bg-color;
 }
