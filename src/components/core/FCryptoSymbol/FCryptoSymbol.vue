@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import ftmIcon from '../../../assets/svg/tokens/FTM.svg';
-import wftmIcon from '../../../assets/svg/tokens/wFTM.svg';
+import icicbIcon from '../../../assets/svg/tokens/ICICB.png';
+import wicicbIcon from '../../../assets/svg/tokens/wICICB.png';
 import fusdIcon from '../../../assets/svg/tokens/fUSD.svg';
 
 /**
@@ -55,10 +55,10 @@ export default {
 
             if (token) {
                 switch (token.symbol) {
-                    case 'FTM':
-                        return ftmIcon;
-                    case 'WFTM':
-                        return wftmIcon;
+                    case 'ICICB':
+                        return icicbIcon;
+                    case 'WICICB':
+                        return wicicbIcon;
                     case 'FUSD':
                         return fusdIcon;
                 }

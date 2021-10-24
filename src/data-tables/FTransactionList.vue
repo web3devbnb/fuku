@@ -347,7 +347,7 @@
                     },
                     {
                         name: 'amount',
-                        label: `${this.$t('view_transaction_list.amount')} (ICICB)`,
+                        label: `${this.$t('view_transaction_list.amount')} (FTM)`,
                         itemProp: `${!this.withoutCursor ? 'transaction.' : ''}value`,
                         formatter: _value => {
                             // return formatNumberByLocale(numToFixed(WEIToFTM(_value), 2), 2)
@@ -361,7 +361,7 @@
 /*
                     {
                         name: 'fee',
-                        label: `${this.$t('view_transaction_list.fee')} (ICICB)`,
+                        label: `${this.$t('view_transaction_list.fee')} (FTM)`,
                         itemProp: 'gasUsed',
                         width: '130px'
                     }

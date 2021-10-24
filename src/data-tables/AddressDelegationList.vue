@@ -205,7 +205,7 @@ export default {
                 },
                 {
                     name: 'amount',
-                    label: 'Amount (ICICB)',
+                    label: 'Amount (FTM)',
                     itemProp: 'delegation.amount',
                     formatter: (_value) => WEIToFTM(_value),
                     width: '160px',
@@ -213,7 +213,7 @@ export default {
                 },
                 {
                     name: 'rewards',
-                    label: 'Pending Rewards (ICICB)',
+                    label: 'Pending Rewards (FTM)',
                     itemProp: 'delegation.pendingRewards',
                     formatter: (_value) => (_value ? WEIToFTM(_value.amount) : '-'),
                     width: '200px',

@@ -34,6 +34,6 @@
 
 <style lang="scss">
 .fcard {
-background-color: #1a1a1a !important;
+    background-color: #1a1a1a !important;
 }
 </style>
