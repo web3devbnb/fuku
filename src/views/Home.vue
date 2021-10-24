@@ -107,7 +107,7 @@
             </div>
         </div>
 
-         <div class="row equal-height mat-5 l2">
+         <!-- <div class="row equal-height mat-5 l2">
             <div class="col-10">
                 <f-card class="half-padding">
                 <div class="home-table-bottom">
@@ -124,7 +124,7 @@
                                         </div>
                 </f-card>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 

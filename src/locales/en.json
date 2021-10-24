@@ -30,7 +30,7 @@
     "source_code": "Source Code",
     "copy_to_clipboard": "Copy {what} to clipboard",
     "copied_to_clipboard": "{what} copied to clipboard",
-    "copied_to_clipboard_warning": "Warning: Use this address to receive Opera ICICB only. If you are receiving ICICB-ERC20 you need to use a different address!",
+    "copied_to_clipboard_warning": "Warning: Use this address to receive ICICB Galaxy only. If you are receiving ICICB-ERC20 you need to use a different address!",
     "gas_used": "Gas Used",
     "hash": "Hash",
     "assets": "Assets",
@@ -66,10 +66,6 @@
         {
             "url": "/contracts",
             "title": "Contracts"
-        },
-        {
-            "url": "https://pwawallet.icicb.network/#/",
-            "title": "Wallet"
         }
     ],
 
