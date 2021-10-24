@@ -1,42 +1,37 @@
-<style>
-main {
-background:#0d0d0d;
-}
-</style>
 <template>
     <div class="f-validators-info">
 
         <template v-if="!dValidatorsInfoError">
-            <div class="row f-data-layout equal-height no-vert-col-padding collapse-md">
+            <div class="row f-data-layout equal-height no-vert-col-padding collapse-md deepak">
                 <div class="col margin-bottom-menu">
-                    <f-card style="background-color: #1a1a1a !important;padding:20px;">
+                    <f-card>
                         <h2>{{ $t('view_validators_info.staking_summary') }}</h2>
 <hr>
                         <div class="row no-collapse">
                             <div class="col-5 f-row-label">{{ $t('view_validators_info.total_self_staked') }}</div>
                             <div class="col">
-                                <div v-show="'fSelfStaked' in dTotals">{{ dTotals.fSelfStaked }} FTM <span v-if="cSelfStaked">({{ cSelfStaked }}%)</span></div>
+                                <div v-show="'fSelfStaked' in dTotals">{{ dTotals.fSelfStaked }} ICICB <span v-if="cSelfStaked">({{ cSelfStaked }}%)</span></div>
                             </div>
                         </div>
 
                         <div class="row no-collapse">
                             <div class="col-5 f-row-label">{{ $t('view_validators_info.total_delegated') }}</div>
                             <div class="col">
-                                <div v-show="'fTotalDelegated' in dTotals">{{ dTotals.fTotalDelegated }} FTM <span v-if="cDelegated">({{ cDelegated }}%)</span></div>
+                                <div v-show="'fTotalDelegated' in dTotals">{{ dTotals.fTotalDelegated }} ICICB <span v-if="cDelegated">({{ cDelegated }}%)</span></div>
                             </div>
                         </div>
 
                         <div class="row no-collapse">
                             <div class="col-5 f-row-label">{{ $t('view_validators_info.total_staked') }}</div>
                             <div class="col">
-                                <div v-show="'fTotalStaked' in dTotals">{{ dTotals.fTotalStaked }} FTM <span v-if="cStaked">({{ cStaked }}%)</span></div>
+                                <div v-show="'fTotalStaked' in dTotals">{{ dTotals.fTotalStaked }} ICICB <span v-if="cStaked">({{ cStaked }}%)</span></div>
                             </div>
                         </div>
 
                         <div class="row no-collapse">
                             <div class="col-5 f-row-label">{{ $t('view_validators_info.daily_rewards') }}</div>
                             <div class="col">
-                                <div v-show="cDailyRewards">{{ formatNumberByLocale(numToFixed(cDailyRewards, 0)) }} FTM</div>
+                                <div v-show="cDailyRewards">{{ formatNumberByLocale(numToFixed(cDailyRewards, 0)) }} ICICB</div>
                             </div>
                         </div>
 
@@ -51,9 +46,9 @@ background:#0d0d0d;
                     </f-card>
                 </div>
                 <div class="col">
-                    <f-card style="background-color: #1a1a1a !important;padding:20px;">
+                    <f-card>
                         <h2>{{ $t('view_validators_info.last_epoch') }}</h2>
-                        <hr>
+<hr>
                         <div class="row no-collapse">
                             <div class="col-5 f-row-label">{{ $t('view_validators_info.epoch_number') }}</div>
                             <div class="col">
@@ -82,14 +77,14 @@ background:#0d0d0d;
                         <div class="row no-collapse">
                             <div class="col-5 f-row-label">{{ $t('view_validators_info.fee') }}</div>
                             <div class="col">
-                                <div v-show="'epochFee' in cEpoch">{{  WEIToFTM(cEpoch.epochFee) }} FTM</div>
+                                <div v-show="'epochFee' in cEpoch">{{  WEIToFTM(cEpoch.epochFee) }} ICICB</div>
                             </div>
                         </div>
 
                         <div class="row no-collapse">
                             <div class="col-5 f-row-label">{{ $t('view_validators_info.total_supply') }}</div>
                             <div class="col">
-                                <div v-show="dTotalSupply">{{ formatNumberByLocale(numToFixed(dTotalSupply, 0)) }} FTM</div>
+                                <div v-show="dTotalSupply">{{ formatNumberByLocale(numToFixed(dTotalSupply, 0)) }} ICICB</div>
                             </div>
                         </div>
                     </f-card>
@@ -132,8 +127,11 @@ background:#0d0d0d;
         </div>
     </div>
 </template>
-
-
+<style>
+.dark-theme .deepak .f-card { background-color: #1a1a1a !important;
+padding:20px;}.deepak .f-card { background-color: #eaeaea !important;
+padding:20px;}
+</style>
 <script>
     import gql from 'graphql-tag';
     import { WEIToFTM } from "../utils/transactions.js";
