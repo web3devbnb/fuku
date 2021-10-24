@@ -7,7 +7,7 @@ const appConfig = {
     // app keywords
     keywords: "fantom, explorer, search, blockchain, crypto, currency",
     // apollo client settings
-    apollo: {
+    apollo: { 
         // list of providers. if one of them is unavailable, another is randomly picked
         providers: [
             {
