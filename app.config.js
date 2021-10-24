@@ -11,7 +11,7 @@ const appConfig = {
         // list of providers. if one of them is unavailable, another is randomly picked
         providers: [
             {
-                http: 'http://192.168.115.160:16761/graphql',
+                http: 'http://3.17.193.52/graphql',
                 /* http: 'https://xapi-nodea.fantom.network/', */
                 // for subscriptions
                 ws: '',
