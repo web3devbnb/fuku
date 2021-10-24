@@ -26,7 +26,7 @@
             <div class="footer">
                 <f-social-media-links></f-social-media-links>
                 <div class="copyright">
-                    <a href="https://fantom.foundation/" target="_blank" rel="nofollow">©2020 Fantom Foundation</a>
+                    <a href="https://galaxy.foundation/" target="_blank" rel="nofollow">©2021 Galaxy Foundation</a>
                 </div>
             </div>
         </div>

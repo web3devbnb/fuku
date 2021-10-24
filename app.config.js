@@ -1,11 +1,11 @@
 const appConfig = {
     // app title
-    name: "Fantom Explorer",
+    name: "ICICB Explorer",
     // app description
     description:
-        "Fantom Explorer allows you to explore and search the Fantom blockchain for transactions, addresses and blocks",
+        "ICICB Explorer allows you to explore and search the ICICB blockchain for transactions, addresses and blocks",
     // app keywords
-    keywords: "fantom, explorer, search, blockchain, crypto, currency",
+    keywords: "icicb, explorer, search, blockchain, crypto, currency",
     // apollo client settings
     apollo: { 
         // list of providers. if one of them is unavailable, another is randomly picked
