@@ -255,3 +255,19 @@
         }
     }
 }
+
+.dark-theme thead {
+    th {
+        font-family: $font-family-proxima;
+        //background-color: var(--f-doc-background-color);
+        background-color: #171717;
+    }
+}
+
+.dark-theme tr {
+    td {
+        font-family: $font-family-proxima;
+        //background-color: var(--f-doc-background-color);
+        background-color: #171717;
+    }
+}
