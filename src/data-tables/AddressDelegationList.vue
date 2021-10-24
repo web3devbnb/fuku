@@ -85,7 +85,7 @@ import FDataTable from '@/components/core/FDataTable/FDataTable.vue';
 import gql from 'graphql-tag';
 import { cloneObject } from '@/utils';
 import { formatDate, formatHexToInt, timestampToDate } from '@/filters.js';
-import { WEIToFTM } from '@/utils/transactions.js';
+import { WEIToICICB } from '@/utils/transactions.js';
 import FTokenValue from "@/components/core/FTokenValue/FTokenValue.vue";
 // import { formatHexToInt } from '@/filters.js';
 
@@ -207,7 +207,7 @@ export default {
                     name: 'amount',
                     label: 'Amount (ICICB)',
                     itemProp: 'delegation.amount',
-                    formatter: (_value) => WEIToFTM(_value),
+                    formatter: (_value) => WEIToICICB(_value),
                     width: '160px',
                     cssClass: 'align-end',
                 },
@@ -215,7 +215,7 @@ export default {
                     name: 'rewards',
                     label: 'Pending Rewards (ICICB)',
                     itemProp: 'delegation.pendingRewards',
-                    formatter: (_value) => (_value ? WEIToFTM(_value.amount) : '-'),
+                    formatter: (_value) => (_value ? WEIToICICB(_value.amount) : '-'),
                     width: '200px',
                     cssClass: 'align-end',
                 },

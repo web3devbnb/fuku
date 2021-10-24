@@ -129,10 +129,10 @@
                             <template v-slot:column-fee="{ value, column }">
                                 <div v-if="column" class="row no-collapse no-vert-col-padding">
                                     <div class="col-5 f-row-label">{{ column.label }}</div>
-                                    <div class="col">{{ WEIToFTM(value | formatHexToInt) }}</div>
+                                    <div class="col">{{ WEIToICICB(value | formatHexToInt) }}</div>
                                 </div>
                                 <template v-else>
-                                    {{ WEIToFTM(value | formatHexToInt) }}
+                                    {{ WEIToICICB(value | formatHexToInt) }}
                                 </template>
                             </template>
                 -->
@@ -148,7 +148,7 @@
 <script>
     import FDataTable from "../components/core/FDataTable/FDataTable.vue";
     import gql from 'graphql-tag';
-    import { WEIToFTM } from "../utils/transactions.js";
+    import { WEIToICICB } from "../utils/transactions.js";
     import {formatHexToInt, timestampToDate, numToFixed, formatNumberByLocale} from "../filters.js";
     import {getNestedProp} from "../utils";
     import FAccountTransactionAmount from "../components/FAccountTransactionAmount.vue";
@@ -350,8 +350,8 @@
                         label: `${this.$t('view_transaction_list.amount')} (ICICB)`,
                         itemProp: `${!this.withoutCursor ? 'transaction.' : ''}value`,
                         formatter: _value => {
-                            // return formatNumberByLocale(numToFixed(WEIToFTM(_value), 2), 2)
-                            return WEIToFTM(_value);
+                            // return formatNumberByLocale(numToFixed(WEIToICICB(_value), 2), 2)
+                            return WEIToICICB(_value);
                         },
                         width: '150px',
                         css: {
@@ -483,7 +483,7 @@
                 }
             },
 
-            WEIToFTM,
+            WEIToICICB,
             timestampToDate,
             numToFixed,
             formatNumberByLocale

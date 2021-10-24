@@ -128,7 +128,7 @@
         "asset": "@:asset",
         "balance": "Total Balance",
         "staking": "Staking",
-        "value_in_ftm": "Value in ICICB",
+        "value_in_icicb": "Value in ICICB",
         "value_in_usd": "Value in USD",
         "available": "Available",
         "delegated": "Delegated",

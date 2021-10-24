@@ -111,7 +111,7 @@ import FDataTable from "@/components/core/FDataTable/FDataTable.vue";
 import FAccountTransactionAmount from "@/components/FAccountTransactionAmount.vue";
 import {cloneObject, getNestedProp} from "@/utils";
 import {formatHexToInt, formatNumberByLocale, numToFixed, timestampToDate} from "@/filters.js";
-import {WEIToFTM} from "@/utils/transactions.js";
+import {WEIToICICB} from "@/utils/transactions.js";
 import gql from "graphql-tag";
 
 export default {
@@ -207,10 +207,10 @@ export default {
                 },
                 {
                     name: 'amount',
-                    label: `${this.$t('view_transaction_list.amount')} (FTM)`,
+                    label: `${this.$t('view_transaction_list.amount')} (ICICB)`,
                     itemProp: `${!this.withoutCursor ? 'transaction.' : ''}value`,
                     formatter: _value => {
-                        return formatNumberByLocale(numToFixed(WEIToFTM(_value), 2), 2)
+                        return formatNumberByLocale(numToFixed(WEIToICICB(_value), 2), 2)
                     },
                     width: '150px',
                     css: {
@@ -321,7 +321,7 @@ export default {
             return getNestedProp(_item, `${!this.withoutCursor ? 'transaction.' : ''}to`)
         },
 
-        WEIToFTM,
+        WEIToICICB,
         timestampToDate,
         numToFixed,
         formatNumberByLocale

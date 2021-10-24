@@ -49,11 +49,11 @@
 import FCard from "../components/core/FCard/FCard.vue";
 import gql from 'graphql-tag';
 import {timestampToDate, formatDate } from "../filters.js";
-import FTMTokenValue from "@/components/core/FTMTokenValue/FTMTokenValue.vue";
+/* import ICICBTokenValue from "@/components/core/ICICBTokenValue/ICICBTokenValue.vue"; */
 
 export default {
     components: {
-        FTMTokenValue,
+        /* ICICBTokenValue, */
         FCard
     },
 

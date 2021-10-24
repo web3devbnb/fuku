@@ -1,19 +1,19 @@
 import web3utils from 'web3-utils';
 
-const WEI_IN_FTM = 1000000000000000000;
+const WEI_IN_ICICB = 1e18;
 
 /**
  * @return {number}
  */
-export function WEIToFTM(_value) {
-    return (_value / WEI_IN_FTM);
+export function WEIToICICB(_value) {
+    return (_value / WEI_IN_ICICB);
 }
 
 /**
  * @return {number}
  */
-export function FTMToWEI(_value) {
-    return _value * WEI_IN_FTM;
+export function ICICBToWEI(_value) {
+    return _value * WEI_IN_ICICB;
 }
 
 /**
@@ -21,7 +21,7 @@ export function FTMToWEI(_value) {
  * @param {number} [_tokenPrice]
  * @return {number}
  */
-export function FTMToUSD(_value, _tokenPrice = 0.002) {
+export function ICICBToUSD(_value, _tokenPrice = 0.002) {
     return _value * _tokenPrice;
 }
 

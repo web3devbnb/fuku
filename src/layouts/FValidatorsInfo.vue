@@ -77,7 +77,7 @@
                         <div class="row no-collapse">
                             <div class="col-5 f-row-label">{{ $t('view_validators_info.fee') }}</div>
                             <div class="col">
-                                <div v-show="'epochFee' in cEpoch">{{  WEIToFTM(cEpoch.epochFee) }} ICICB</div>
+                                <div v-show="'epochFee' in cEpoch">{{  WEIToICICB(cEpoch.epochFee) }} ICICB</div>
                             </div>
                         </div>
 
@@ -134,7 +134,7 @@ padding:20px;}
 </style>
 <script>
     import gql from 'graphql-tag';
-    import { WEIToFTM } from "../utils/transactions.js";
+    import { WEIToICICB } from "../utils/transactions.js";
     import FCard from "../components/core/FCard/FCard.vue";
     import FValidatorList from "../data-tables/FValidatorList.vue";
     import {formatHexToInt, formatNumberByLocale, numToFixed, timestampToDate} from "../filters.js";
@@ -203,7 +203,7 @@ padding:20px;}
                     }
                 },
                 result(_data) {
-                    this.dTotalSupply = WEIToFTM(_data.data.epoch.totalSupply);
+                    this.dTotalSupply = WEIToICICB(_data.data.epoch.totalSupply);
                 },
                 error(_error) {
                     this.dValidatorsInfoError = _error.message;
@@ -256,7 +256,7 @@ padding:20px;}
                 const {epoch} = this;
 
                 if (epoch && epoch.baseRewardPerSecond) {
-                    return WEIToFTM(epoch.baseRewardPerSecond) * 86400;
+                    return WEIToICICB(epoch.baseRewardPerSecond) * 86400;
                 }
 
                 return 0;
@@ -300,7 +300,7 @@ padding:20px;}
                 this.dFlaggedItems = _flagged;
             },
 
-            WEIToFTM,
+            WEIToICICB,
             timestampToDate,
             formatHexToInt,
             formatNumberByLocale,

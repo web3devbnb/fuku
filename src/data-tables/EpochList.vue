@@ -61,7 +61,7 @@
 <script>
 import FDataTable from "../components/core/FDataTable/FDataTable.vue";
 import gql from "graphql-tag";
-import { WEIToFTM } from "../utils/transactions.js";
+import { WEIToICICB } from "../utils/transactions.js";
 import {timestampToDate, formatHexToInt, formatDate } from "../filters.js";
 import {cloneObject} from "@/utils";
 import FTokenValue from "@/components/core/FTokenValue/FTokenValue.vue";
@@ -165,21 +165,21 @@ export default {
                     name: 'baseReward',
                     label: this.$t('epoch.total_base_reward') + ' (ICICB)',
                     itemProp: 'epoch.totalBaseRewardWeight',
-                    formatter: (_value) => formatNumberByLocale(WEIToFTM(_value), 1, 2),
+                    formatter: (_value) => formatNumberByLocale(WEIToICICB(_value), 1, 2),
                     cssClass: 'align-end',
                 },*/
                 {
                     name: 'fee',
                     label: this.$t('epoch.total_fee') + ' (ICICB)',
                     itemProp: 'epoch.epochFee',
-                    formatter: (_value) => WEIToFTM(_value),
+                    formatter: (_value) => WEIToICICB(_value),
                     cssClass: 'align-end',
                 },
                 /*{
                     name: 'txReward',
                     label: this.$t('epoch.total_tx_reward') + ' (ICICB)',
                     itemProp: 'epoch.totalTxRewardWeight',
-                    formatter: (_value) => formatNumberByLocale(WEIToFTM(_value), 1, 2),
+                    formatter: (_value) => formatNumberByLocale(WEIToICICB(_value), 1, 2),
                     cssClass: 'align-end',
                 }*/
             ]
@@ -222,7 +222,7 @@ export default {
             }
         },
 
-        WEIToFTM,
+        WEIToICICB,
         timestampToDate
     }
 };

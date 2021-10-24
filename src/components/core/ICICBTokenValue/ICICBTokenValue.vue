@@ -1,5 +1,5 @@
 <template>
-    <span class="ftmtokenvalue">
+    <span class="icicbtokenvalue">
         <f-token-value
             :value="cValue"
             :decimals="decimals"
@@ -14,10 +14,10 @@
 
 <script>
 import FTokenValue from '@/components/core/FTokenValue/FTokenValue.vue';
-import { WEIToFTM } from '@/utils/transactions.js';
+import { WEIToICICB } from '@/utils/transactions.js';
 
 export default {
-    name: 'FTMTokenValue',
+    name: 'ICICBTokenValue',
 
     components: { FTokenValue },
 
@@ -30,7 +30,7 @@ export default {
             type: Number,
             default: 2,
         },
-        /** Convert value to FTM */
+        /** Convert value to ICICB */
         convert: {
             type: Boolean,
             default: false,
@@ -47,7 +47,7 @@ export default {
 
     computed: {
         cValue() {
-            return this.convert ? WEIToFTM(this.value) : this.value;
+            return this.convert ? WEIToICICB(this.value) : this.value;
         },
     },
 };

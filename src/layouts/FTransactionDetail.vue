@@ -39,12 +39,12 @@
                 </div>
                 <div class="row no-collapse">
                     <div class="col-4 f-row-label">{{ $t('view_transaction_detail.amount') }}</div>
-                    <div class="col"><div class="break-word" v-show="cTransaction">{{  WEIToFTM(cTransaction.value) }} FTM</div></div>
+                    <div class="col"><div class="break-word" v-show="cTransaction">{{  WEIToICICB(cTransaction.value) }} ICICB</div></div>
                 </div>
                 <!--
                             <div class="row no-collapse">
                                 <div class="col-4 f-row-label">{{ $t('view_transaction_detail.fee') }}</div>
-                                <div class="col"><div class="break-word" v-show="cTransaction">{{  WEIToFTM(cTransaction.fee) }} FTM</div></div>
+                                <div class="col"><div class="break-word" v-show="cTransaction">{{  WEIToICICB(cTransaction.fee) }} ICICB</div></div>
                             </div>
                 -->
                 <div class="row no-collapse">
@@ -75,7 +75,7 @@
                 </div>
                 <div class="row no-collapse">
                     <div class="col-4 f-row-label">{{ $t('view_transaction_detail.transaction_fee') }}</div>
-                    <div class="col"><div class="break-word" v-show="cTransaction">{{  cTransactionFee }} FTM</div></div>
+                    <div class="col"><div class="break-word" v-show="cTransaction">{{  cTransactionFee }} ICICB</div></div>
                 </div>
                 <div class="row no-collapse">
                     <div class="col-4 f-row-label">{{ $t('view_transaction_detail.input_data') }}</div>
@@ -92,7 +92,7 @@
 <script>
     import FCard from "../components/core/FCard/FCard.vue";
     import gql from 'graphql-tag';
-    import { WEIToFTM } from "../utils/transactions.js";
+    import { WEIToICICB } from "../utils/transactions.js";
     import { formatHexToInt, timestampToDate, formatDate } from "../filters.js";
     import FTransactionStatus from "../components/FTransactionStatus.vue";
 
@@ -161,7 +161,7 @@
                 const {transaction} = this;
 
                 if (transaction) {
-                    return WEIToFTM(this.formatHexToInt(transaction.gasPrice) * this.formatHexToInt(transaction.gasUsed));
+                    return WEIToICICB(this.formatHexToInt(transaction.gasPrice) * this.formatHexToInt(transaction.gasUsed));
                 }
 
                 return 0;
@@ -186,7 +186,7 @@
         },
 
         methods: {
-            WEIToFTM,
+            WEIToICICB,
             formatHexToInt,
             timestampToDate,
             formatDate,

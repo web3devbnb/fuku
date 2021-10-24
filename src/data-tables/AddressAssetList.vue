@@ -197,7 +197,7 @@ export default {
          * @param {DefiToken[]} _value
          */
         tokens(_value) {
-            // this.items = _value.filter((_item) => _item.isActive && _item.canDeposit && _item.symbol !== 'FTM');
+            // this.items = _value.filter((_item) => _item.isActive && _item.canDeposit && _item.symbol !== 'ICICB');
             this.prepareTokens(_value);
 
             this.items = _value.filter(
@@ -258,7 +258,7 @@ export default {
          * @return {boolean}
          */
         usedInFMint(_token) {
-            return _token.symbol === 'WFTM' || _token.symbol === 'FUSD';
+            return _token.symbol === 'WICICB' || _token.symbol === 'FUSD';
         },
     },
 };

@@ -149,7 +149,7 @@ export default {
                 $defi.init(),
             ]);
 
-            this.tokens = result[0].filter((_item) => _item.isActive && _item.symbol !== 'FTM');
+            this.tokens = result[0].filter((_item) => _item.isActive && _item.symbol !== 'ICICB');
 
             this.$emit('records-count', this.tokens.length);
         },

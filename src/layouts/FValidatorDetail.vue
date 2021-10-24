@@ -56,7 +56,7 @@
                     <div class="col-4 f-row-label">{{ $t('view_validator_detail.amount_staked') }}</div>
                     <div class="col">
                         <div v-show="'stake' in cStaker">
-                            {{ formatNumberByLocale(numToFixed(WEIToFTM(cStaker.stake), 0)) }} FTM
+                            {{ formatNumberByLocale(numToFixed(WEIToICICB(cStaker.stake), 0)) }} ICICB
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     <div class="col-4 f-row-label">{{ $t('view_validator_detail.amount_delegated') }}</div>
                     <div class="col">
                         <div v-show="'delegatedMe' in cStaker">
-                            {{ formatNumberByLocale(numToFixed(WEIToFTM(cStaker.delegatedMe), 0)) }} FTM
+                            {{ formatNumberByLocale(numToFixed(WEIToICICB(cStaker.delegatedMe), 0)) }} ICICB
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                     <div class="col-4 f-row-label">{{ $t('view_validator_detail.staking_total') }}</div>
                     <div class="col">
                         <div v-show="'totalStake' in cStaker">
-                            {{ formatNumberByLocale(numToFixed(WEIToFTM(cStaker.totalStake), 0)) }} FTM
+                            {{ formatNumberByLocale(numToFixed(WEIToICICB(cStaker.totalStake), 0)) }} ICICB
                         </div>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
         formatDate,
         prepareTimestamp
     } from "../filters.js";
-    import { WEIToFTM } from "../utils/transactions.js";
+    import { WEIToICICB } from "../utils/transactions.js";
     import FDelegationList from "../data-tables/FDelegationList.vue";
     import FYesNo from "../components/FYesNo.vue";
 
@@ -274,7 +274,7 @@
                 this.dDelegationListRecordsCount = _num;
             },
 
-            WEIToFTM,
+            WEIToICICB,
             timestampToDate,
             formatDate,
             formatHexToInt,
