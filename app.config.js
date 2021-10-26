@@ -11,7 +11,7 @@ const appConfig = {
         // list of providers. if one of them is unavailable, another is randomly picked
         providers: [
             {
-                http: 'http://3.17.193.52/graphql',
+                http: 'http://13.59.118.124/graphql', //http://3.17.193.52/graphql , http://127.0.0.1:16761/graphql
                 /* http: 'https://xapi-nodea.fantom.network/', */
                 // for subscriptions
                 ws: '',
@@ -54,7 +54,7 @@ const appConfig = {
         // list of providers. if one of them is unavailable, another is randomly picked
         providers: [
             {
-                http: 'https://xapi.testnet.fantom.network/api',
+                http: 'http://18.117.255.252/graphql',
                 // for subscriptions
                 ws: '',
             },
@@ -65,7 +65,7 @@ const appConfig = {
     // pwa settings
     pwa: {
         // name used in pwa manifest
-        name: "Fantom Explorer"
+        name: "ICICB Explorer"
     },
     // default options for production build
     build: {
