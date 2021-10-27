@@ -71,6 +71,7 @@
 </script>
 
 <style lang="scss">
+    
     .f-hamburger-switch {
         display: inline-block;
         width: 24px;
@@ -89,7 +90,7 @@
             position: absolute;
             width: 100%;
             height: 2px;
-            background-color: #fff;
+            background-color: #aaa;
             border-radius: 3px;
             transition: all $transition-length ease;
         }
@@ -185,6 +186,11 @@
                     transform: translate(0, -9px) rotate(-45deg);
                 }
             }
+        }
+    }
+    .dark-theme .f-hamburger-switch {
+        .l1, .l2, .l3 {
+            background-color: white;
         }
     }
 </style>

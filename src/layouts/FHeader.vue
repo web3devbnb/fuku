@@ -14,7 +14,7 @@
                     ></f-navigation>
                     <f-dark-mode-switch ref="darkModeSwitch" />
                     <f-search-box ref="searchBox" class="small" expandable v-show="!cHomeView"></f-search-box>
-                    <a v-on:click="changeNetwork" style="cursor:pointer">{{ labelChangeNetwork }}</a>
+                    <a class="ch-network" v-on:click="changeNetwork">{{ labelChangeNetwork }}</a>
                     <f-hamburger-switch
                         thickness="2"
                         two-lines
@@ -131,10 +131,6 @@
                 }
             }
         },
-        ready() {
-            
-        },
-
         methods: {
             moveNavigationToDrawer() {
                 const { $refs } = this;
@@ -320,6 +316,10 @@
                 transform: translateX(0);
             }
         }
+
+        a.ch-network {
+            padding:10px;cursor:pointer
+        }
     }
 
     .search-box-on {
@@ -415,6 +415,9 @@
                     text-align: end;
                     margin-inline-end: 8px;
                 }
+            }
+            a.ch-network {
+                margin-right: 60px;
             }
         }
     }
