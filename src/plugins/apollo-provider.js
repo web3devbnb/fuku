@@ -27,7 +27,13 @@ function setHttpApolloProviders(_providers, _defaultHttpProvider) {
     return providers;
 }
 
-const apolloProviders = appConfig.apollo.providers;
+
+const network = window.localStorage.getItem('graphql-network');
+const apolloProviders = network==='testnet' ? appConfig.testnet.providers : appConfig.apollo.providers;
+console.log(network, apolloProviders)
+
+
+
 const maxRetryLinkAttempts = apolloProviders.length;
 let defaultProviderIndex = appConfig.apollo.defaultProviderIndex;
 

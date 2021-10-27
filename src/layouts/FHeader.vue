@@ -3,7 +3,10 @@
         <div class="narrow-container">
             <div class="row no-collapse align-items-center">
                 <div class="col-2">
-                    <router-link to="/" class="logo" :aria-label="$t('view_home.back_to_home')"><img src="/logo.svg" alt="" class="not-fluid"></router-link>
+                    <router-link to="/" class="logo" :aria-label="$t('view_home.back_to_home')">
+                        <img src="/logo.svg" alt="" class="not-fluid">
+                        <i style='color:red'>{{ isTestnet ? 'TESTNET' : '' }}</i>
+                    </router-link>
                 </div>
                 <div class="col right-col">
                     <f-navigation
@@ -11,6 +14,7 @@
                     ></f-navigation>
                     <f-dark-mode-switch ref="darkModeSwitch" />
                     <f-search-box ref="searchBox" class="small" expandable v-show="!cHomeView"></f-search-box>
+                    <a v-on:click="changeNetwork" style="cursor:pointer">{{ labelChangeNetwork }}</a>
                     <f-hamburger-switch
                         thickness="2"
                         two-lines
@@ -54,7 +58,18 @@
         },
 
         data() {
+            const network = window.localStorage.getItem('graphql-network');
+            let labelChangeNetwork = 'Switch to testnet'
+            let isTestnet = network==='testnet';
+            if (isTestnet) {
+                labelChangeNetwork = 'Switch to mainnet';
+            } else {
+                labelChangeNetwork = 'Switch to testnet';
+            }
+            /* this.labelChangeNetwork = "Switch to testnet" */
             return {
+                isTestnet,
+                labelChangeNetwork,
                 /** Is drawer visible? */
                 dDrawerOn: false
             }
@@ -115,6 +130,9 @@
                     this.hamburgerSwitchOff();
                 }
             }
+        },
+        ready() {
+            
         },
 
         methods: {
@@ -178,6 +196,16 @@
 
             onDrawerClick() {
                 this.hamburgerSwitchOff();
+            },
+
+            changeNetwork() {
+                const network = window.localStorage.getItem('graphql-network');
+                if (network==='testnet') {
+                    window.localStorage.setItem('graphql-network', 'mainnet');
+                } else {
+                    window.localStorage.setItem('graphql-network', 'testnet');
+                }
+                window.location.reload();
             }
         }
     }
@@ -186,7 +214,7 @@
 <style lang="scss">
 .dark-theme .f-header {background: var(--f-header-background-color)!important;}
     .f-header {
-        /*--f-header-background-color: #{$theme-color};*/
+        --f-header-background-color: white;
         --f-header-link-color: #{$secondary-color-lighter};
 
         /*position: -webkit-sticky;*/
