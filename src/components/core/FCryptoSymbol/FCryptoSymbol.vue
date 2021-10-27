@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import icicbIcon from '../../../assets/svg/tokens/ICICB.png';
-import wicicbIcon from '../../../assets/svg/tokens/wICICB.png';
+import icicbIcon from '../../../assets/svg/tokens/ICICB.svg';
+import wicicbIcon from '../../../assets/svg/tokens/wICICB.svg';
 import fusdIcon from '../../../assets/svg/tokens/fUSD.svg';
 
 /**
