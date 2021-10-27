@@ -46,7 +46,7 @@ const appConfig = {
         defaultProviderIndex: "random"
     },
     //
-    useTestnet: false,
+    useTestnet: true,
     // use 'hash' mode in vue router
     routerHashMode: false,
     // testnet config
@@ -54,7 +54,7 @@ const appConfig = {
         // list of providers. if one of them is unavailable, another is randomly picked
         providers: [
             {
-                http: 'http://18.117.255.252/graphql',
+                http: 'http://3.15.233.209/graphql',
                 // for subscriptions
                 ws: '',
             },
