@@ -378,7 +378,7 @@
                 position: fixed;
                 z-index: 12;
                 top: 8px;
-                left: 50%;
+                left: 35%;
                 margin-inline-end: 0;
                 margin-inline-start: 0;
                 /*transform: scale(0.5);*/
@@ -391,7 +391,7 @@
                         }
 
                         button[type="submit"] {
-                            color: #fff;
+                            /* color: #fff; */
 
                             &:hover {
                                 background-color: transparent !important;
