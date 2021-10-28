@@ -11,7 +11,7 @@ const appConfig = {
         // list of providers. if one of them is unavailable, another is randomly picked
         providers: [
             {
-                http: 'http://18.117.255.252/graphql', // http://127.0.0.1:16761/graphql
+                http: 'http://13.59.118.124/graphql', // http://127.0.0.1:16761/graphql
                 // for subscriptions
                 ws: '',
             },
