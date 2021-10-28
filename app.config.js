@@ -11,36 +11,10 @@ const appConfig = {
         // list of providers. if one of them is unavailable, another is randomly picked
         providers: [
             {
-                http: 'http://13.59.118.124/graphql', //http://3.17.193.52/graphql , http://127.0.0.1:16761/graphql
-                /* http: 'https://xapi-nodea.fantom.network/', */
+                http: 'http://18.117.255.252/graphql', // http://127.0.0.1:16761/graphql
                 // for subscriptions
                 ws: '',
             },
-            /* {
-                http: 'https://xapi-nodeb.fantom.network/',
-                // for subscriptions
-                ws: '',
-            },
-            {
-                http: 'https://xapi-nodec.fantom.network/',
-                // for subscriptions
-                ws: '',
-            },
-            {
-                http: 'https://xapi-noded.fantom.network/',
-                // for subscriptions
-                ws: '',
-            },
-            {
-                http: 'https://xapi-nodee.fantom.network/',
-                // for subscriptions
-                ws: '',
-            },
-            {
-                http: 'https://xapi-nodef.fantom.network/',
-                // for subscriptions
-                ws: '',
-            }, */
         ],
         // index into providers array of default provider or 'random' - takes index randomly
         defaultProviderIndex: "random"
@@ -54,7 +28,7 @@ const appConfig = {
         // list of providers. if one of them is unavailable, another is randomly picked
         providers: [
             {
-                http: 'http://3.15.233.209/graphql',
+                http: 'http://18.117.255.252/graphql',
                 // for subscriptions
                 ws: '',
             },

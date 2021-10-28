@@ -340,7 +340,7 @@
                 z-index: 11;
 
                 > img {
-                    max-height: 30px;
+                    max-height: 40px;
                 }
             }
 

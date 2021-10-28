@@ -2,7 +2,7 @@
     <div class="view-home narrow-container">
         <div class="row">
             <div class="col-8 offset-2 col-10-lg offset-1-lg col-12-sm no-offset-sm">
-            <h1 class="serarch-heading">Welcome to <span>ICBICB</span></h1>
+            <h1 class="serarch-heading">Welcome to <span>ICICB</span></h1>
                 <f-search-box></f-search-box>
             </div>
         </div>

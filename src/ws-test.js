@@ -19,7 +19,7 @@ function onError2(evt) {
 
 export function initWSTest() {
     // ws = new WebSocket('wss://echo.websocket.org');
-    ws = new WebSocket('wss://xapi6.fantom.network/graphql');
+    ws = new WebSocket('wss://13.59.118.124/graphql');
 
     ws.onopen = function(evt) { onOpen(evt) };
     ws.onclose = function(evt) { onClose(evt) };
