@@ -13,13 +13,12 @@ const appConfig = {
             {
                 http: 'http://13.59.118.124/graphql', // http://127.0.0.1:16761/graphql
                 // for subscriptions
-                ws: '',
+                ws: '', 
             },
         ],
         // index into providers array of default provider or 'random' - takes index randomly
         defaultProviderIndex: "random"
     },
-    //
     useTestnet: false,
     // use 'hash' mode in vue router
     routerHashMode: false,
