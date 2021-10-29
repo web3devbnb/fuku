@@ -6,17 +6,7 @@
                     <router-link to="/" class="logo" :aria-label="$t('view_home.back_to_home')"><img src="/logo.svg" alt="" class="not-fluid" style="max-height:200px"></router-link>
                 </div>
                 <div class="col right-col">
-                    <f-navigation
-                        :items="cNavigation"
-                    ></f-navigation>
-                    <f-dark-mode-switch ref="darkModeSwitch" />
-                    <f-search-box ref="searchBox" class="small" expandable v-show="!cHomeView"></f-search-box>
-                    <f-hamburger-switch
-                        thickness="2"
-                        two-lines
-                        @hamburger-switch-on="onHamburgerSwitchOn"
-                        @hamburger-switch-off="onHamburgerSwitchOff"
-                    ></f-hamburger-switch>
+                    <f-navigation :items="cNavigation" />
                 </div>
             </div>
              </div>
@@ -24,52 +14,29 @@
 </template>
 
 <script>
-        import FNavigation from "../components/FNavigation.vue";
+    import FNavigation from "../components/FNavigation.vue";
     import { mapState } from 'vuex';
 
-    /**
-     * Renderes header and takes care of navigation.
-     */
     export default {
         components: {
             FNavigation
-                    },
+        },
 
         data() {
-            return {
-                /** Is drawer visible? */
-                dDrawerOn: false
-            }
+            return { dDrawerOn: false }
         },
 
         computed: {
-            /**
-             * Get navigation by current language.
-             *
-             * @return {array}
-             */
             cNavigation() {
                 const messages = this.$i18n.messages[this.$i18n.locale];
 
                 return messages.navigation || [];
             },
-
-            /**
-             * Container's css classes.
-             *
-             * @retun {object}
-             */
             cCssClass() {
                 return {
                     'drawer-on': this.dDrawerOn
                 }
             },
-
-            /**
-             * Is current route home view?
-             *
-             * @retun {boolean}
-             */
             cHomeView() {
                 return (this.$route.name === 'home');
             },
@@ -78,18 +45,9 @@
         },
 
         watch: {
-            /**
-             * Watches for vue route change.
-             */
             $route() {
                 this.hamburgerSwitchOff();
             },
-
-            /**
-             * Watches for `breakpoints` state change.
-             *
-             * @param {object} _breakpoints
-             */
             breakpoints(_breakpoints) {
                 const menuMobileBreakpoint = _breakpoints['menu-mobile'];
 
@@ -103,9 +61,7 @@
             moveNavigationToDrawer() {
                 const { $refs } = this;
 
-                if (!this.$el) {
-                    return;
-                }
+                if (!this.$el) return;
 
                 const eFNavigation = this.$el.querySelector('.f-navigation');
                 const eDrawer = this.$el.querySelector('.f-drawer .body');
@@ -122,9 +78,7 @@
             moveNavigationFromDrawer() {
                 const { $refs } = this;
 
-                if (!this.$el) {
-                    return;
-                }
+                if (!this.$el) return;
 
                 const eFNavigation = this.$el.querySelector('.f-navigation');
                 const eRightCol = this.$el.querySelector('.right-col');

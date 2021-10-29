@@ -60,26 +60,6 @@
                         <router-link :to="{name: 'validator-detail', params: {address: value}}" :title="value">{{ value | formatHash }}</router-link>
                     </template>
                 </template>
-
-<!--
-                <template v-slot:column-link="{ value, item, column }">
-                    <div v-if="column" class="row no-collapse no-vert-col-padding">
-                        <div class="col-6 f-row-label">{{ column.label }}</div>
-                        <div class="col break-word">
-                            <a v-if="value" :href="value" target="_blank" rel="nofollow">
-                                <icon data="@/assets/svg/external-link-alt.svg" width="20" height="20"></icon>
-                            </a>
-                            <template v-else>-</template>
-                        </div>
-                    </div>
-                    <template v-else>
-                        <a v-if="value || (item.stakerInfo && item.stakerInfo.contact)" :href="value || (item.stakerInfo && item.stakerInfo.contact)" target="_blank" rel="nofollow">
-                            <icon data="@/assets/svg/external-link-alt.svg"></icon>
-                        </a>
-                        <template v-else>-</template>
-                    </template>
-                </template>
--->
             </f-data-table>
         </template>
 

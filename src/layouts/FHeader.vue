@@ -5,7 +5,8 @@
                 <div class="col-2">
                     <router-link to="/" class="logo" :aria-label="$t('view_home.back_to_home')">
                         <img src="/logo.svg" alt="" class="not-fluid">
-                        <i style='color:red'>{{ isTestnet ? 'TESTNET' : '' }}</i>
+                        <b class="testnet" v-show="isTestnet">Testnet</b>
+                        
                     </router-link>
                 </div>
                 <div class="col right-col">
@@ -225,6 +226,7 @@
         transition: height $transition-length ease;
         border-bottom: 1px solid transparent;
 
+
         .narrow-container {
             padding-top: 0;
             padding-bottom: 0;
@@ -236,6 +238,23 @@
         }
 
         .logo {
+            position: relative;
+
+            .testnet {
+                position: absolute;
+                display: inline-block;
+                padding: 0.25em 0.4em;
+                font-size: 75%;
+                font-weight: 700;
+                line-height: 1;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: baseline;
+                border-radius: 0.25rem;
+                color: #fff;
+                background-color: #de4437;
+            }
+
             > img {
                 max-height: 82px;
                 margin-bottom: 0 !important;
@@ -318,7 +337,15 @@
         }
 
         a.ch-network {
-            padding:10px;cursor:pointer
+            display: inline-block;
+            margin: 0 10px;
+            padding:0.3em 1em;cursor:pointer;
+            border-radius: 20px;
+            transition: all 250ms ease;
+            &:hover {
+                color: #fff;
+                background-color: #de4437;
+            }
         }
     }
 
@@ -334,13 +361,12 @@
         .f-header {
             .logo {
                 position: fixed;
-                /*top: 10px;*/
-                top: 14px;
+                top: 4px;
                 left: 16px;
                 z-index: 11;
 
                 > img {
-                    max-height: 40px;
+                    max-height: 55px;
                 }
             }
 
@@ -378,7 +404,7 @@
                 position: fixed;
                 z-index: 12;
                 top: 8px;
-                left: 35%;
+                left: 30%;
                 margin-inline-end: 0;
                 margin-inline-start: 0;
                 /*transform: scale(0.5);*/
