@@ -699,7 +699,10 @@
             }
         }
 
-        > .f-card {
+        .f-card {
+            padding: 30px;
+            -webkit-box-shadow: var(--f-card-box-shadow) !important;
+            box-shadow: var(--f-card-box-shadow) !important;
         }
 
         .f-tabs {
