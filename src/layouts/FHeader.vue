@@ -61,7 +61,7 @@
         data() {
             const network = window.localStorage.getItem('graphql-network');
             let labelChangeNetwork = 'Switch to testnet'
-            let isTestnet = network==='testnet';
+            let isTestnet = network!=='mainnet';
             if (isTestnet) {
                 labelChangeNetwork = 'Switch to mainnet';
             } else {
