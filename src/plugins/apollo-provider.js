@@ -29,7 +29,7 @@ function setHttpApolloProviders(_providers, _defaultHttpProvider) {
 
 
 const network = window.localStorage.getItem('graphql-network');
-const apolloProviders = network==='testnet' ? appConfig.testnet.providers : appConfig.apollo.providers;
+const apolloProviders = network!=='mainnet' ? appConfig.testnet.providers : appConfig.apollo.providers;
 console.log(network, apolloProviders)
 
 
