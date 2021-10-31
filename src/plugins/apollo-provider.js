@@ -32,8 +32,6 @@ const network = window.localStorage.getItem('graphql-network');
 const apolloProviders = network!=='mainnet' ? appConfig.testnet.providers : appConfig.apollo.providers;
 console.log(network, apolloProviders)
 
-
-
 const maxRetryLinkAttempts = apolloProviders.length;
 let defaultProviderIndex = appConfig.apollo.defaultProviderIndex;
 
