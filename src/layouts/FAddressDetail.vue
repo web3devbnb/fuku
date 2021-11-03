@@ -14,11 +14,11 @@
                     <div class="balance center-v">
                         <h3 class="h1">
                             <span v-show="cAccount">
-                                <f-t-m-token-value :value="cAccount ? cAccount.totalValue : 1" convert no-currency /> <span class="icicb">ICICB</span>
+                                <ICICBTokenValue :value="cAccount ? cAccount.totalValue : 1" convert no-currency /> <span class="icicb">ICICB</span>
                             </span>
                         </h3>
                         <div v-show="cAccount" class="usd">
-                            <f-t-m-token-value :value="toUSD(cAccount ? cAccount.totalValue : 1)" with-price-currency no-currency />
+                            <ICICBTokenValue :value="toUSD(cAccount ? cAccount.totalValue : 1)" with-price-currency no-currency />
                         </div>
                     </div>
                 </f-card>
@@ -26,15 +26,14 @@
             <div class="col col-6-lg margin-bottom-menu">
                 <f-card>
                     <h2>{{ $t('view_address_detail.available') }}</h2>
-
                     <div class="balance center-v">
                         <h3 class="h1">
                             <span v-show="'available' in cAssets">
-                                <f-t-m-token-value :value="cAssets.available" convert no-currency /> <span class="icicb">ICICB</span>
+                                <ICICBTokenValue :value="cAssets.available" convert no-currency /> <span class="icicb">ICICB</span>
                             </span>
                         </h3>
                         <div v-show="'available' in cAssets" class="usd">
-                            <f-t-m-token-value :value="toUSD(cAssets.available)" with-price-currency no-currency />
+                            <ICICBTokenValue :value="toUSD(cAssets.available)" with-price-currency no-currency />
                         </div>
                     </div>
                 </f-card>
@@ -42,31 +41,22 @@
             <div class="col">
                 <f-card>
                     <h2>{{ $t('view_address_detail.staking') }}</h2>
-
-                    <!--
-                                            <div class="row no-collapse">
-                                                <div class="col f-row-label">{{ $t('view_address_detail.available') }}</div>
-                                                <div class="col">
-                                                    <div v-show="'available' in cAssets">{{ toICICB(cAssets.available) }} ICICB</div>
-                                                </div>
-                                            </div>
-                    -->
                     <div class="row no-collapse">
                         <div class="col f-row-label">{{ $t('view_address_detail.delegated') }}</div>
                         <div class="col">
-                            <div v-show="'delegated' in cAssets"><f-t-m-token-value :value="cAssets.delegated" /></div>
+                            <div v-show="'delegated' in cAssets"><ICICBTokenValue :value="cAssets.delegated" /></div>
                         </div>
                     </div>
                     <div class="row no-collapse">
                         <div class="col f-row-label">{{ $t('view_address_detail.pending_rewards') }}</div>
                         <div class="col">
-                            <div v-show="'pending_rewards' in cAssets"><f-t-m-token-value :value="cAssets.pending_rewards" /></div>
+                            <div v-show="'pending_rewards' in cAssets"><ICICBTokenValue :value="cAssets.pending_rewards" /></div>
                         </div>
                     </div>
                     <div class="row no-collapse">
                         <div class="col f-row-label">{{ $t('view_address_detail.stashed_rewards') }}</div>
                         <div class="col">
-                            <div v-show="'stashed' in cAssets"><f-t-m-token-value :value="cAssets.stashed" convert /></div>
+                            <div v-show="'stashed' in cAssets"><ICICBTokenValue :value="cAssets.stashed" convert /></div>
                         </div>
                     </div>
                     <div class="row no-collapse">
@@ -95,41 +85,6 @@
                 </f-card>
             </div>
         </div>
-
-        <!--
-                    <br><br>
-                    <f-card>
-                        <h2 class="break-word">{{ id }}</h2>
-                        <div class="row">
-                            <div class="col">
-                                <div class="num-block">
-                                    <h2 class="h3">{{ $t('view_address_detail.value_in_icicb') }}</h2>
-                                    <div class="num"><span v-show="cAccount">{{ toICICB(cAccount ? cAccount.totalValue : 1) }}</span></div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="num-block">
-                                    <h2 class="h3">{{ $t('view_address_detail.value_in_usd') }}</h2>
-                                    <div class="num"><span v-show="cAccount">{{ toUSD(cAccount ? cAccount.totalValue : 1) }}</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </f-card>
-        -->
-
-        <!--
-                    <div class="f-subsection">
-                        <h2 class="h1">{{ $t('view_address_detail.assets') }} <span v-if="cAssetItems.length" class="f-records-count">({{ cAssetItems.length }})</span></h2>
-
-                        <f-data-table
-                            :columns="dAssetColumns"
-                            :items="cAssetItems"
-                            fixed-header
-                        >
-                        </f-data-table>
-                    </div>
-        -->
-
         <div class="f-subsection">
             <f-tabs>
                 <template #transactions>
@@ -193,9 +148,6 @@
                     <address-delegation-list v-if="this.loadDelegations" :account-address="id" @records-count="onDelegationsRecordsCount" />
                 </f-tab>
             </f-tabs>
-
-<!--                <h2 class="h1">{{ $t('view_block_detail.block_transactions') }} <span v-if="dRecordsCount" class="f-records-count">({{ dRecordsCount }})</span></h2>-->
-
         </div>
     </div>
 </template>
@@ -210,7 +162,7 @@
     import FTab from "@/components/core/FTabs/FTab.vue";
     import AddressDelegationList from "@/data-tables/AddressDelegationList.vue";
     import AddressAssetList from "@/data-tables/AddressAssetList.vue";
-    /* import ICICBTokenValue from "@/components/core/ICICBTokenValue/ICICBTokenValue.vue"; */
+    import ICICBTokenValue from "@/components/core/ICICBTokenValue/ICICBTokenValue.vue";
     import Erc20TransationList from "@/data-tables/Erc20TransationList.vue";
     import Erc721TransationList from "@/data-tables/Erc721TransationList.vue";
     import Erc1155TransationList from "@/data-tables/Erc1155TransationList.vue";
@@ -220,7 +172,7 @@
             Erc1155TransationList,
             Erc721TransationList,
             Erc20TransationList,
-            /* ICICBTokenValue, */
+            ICICBTokenValue,
             AddressAssetList,
             AddressDelegationList,
             FTab,

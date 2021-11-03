@@ -17,7 +17,7 @@ import FTokenValue from '@/components/core/FTokenValue/FTokenValue.vue';
 import { WEIToICICB } from '@/utils/transactions.js';
 
 export default {
-    name: 'ICICBTokenValue',
+    name: 'icicb-token-value',
 
     components: { FTokenValue },
 

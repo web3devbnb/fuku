@@ -81,5 +81,10 @@ module.exports = {
             config.plugins.delete('workbox')
         }
 
+    },
+
+    configureWebpack: {
+        devtool: 'source-map'
     }
+    
 };
