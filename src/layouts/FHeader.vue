@@ -15,7 +15,7 @@
                     ></f-navigation>
                     <f-dark-mode-switch ref="darkModeSwitch" />
                     <f-search-box ref="searchBox" class="small" expandable v-show="!cHomeView"></f-search-box>
-                    <a class="ch-network" v-on:click="changeNetwork">{{ labelChangeNetwork }}</a>
+                    <a class="ch-network" v-bind:href="urlExplorer" v-on:click="changeNetwork">{{ labelChangeNetwork }}</a>
                     <f-hamburger-switch
                         thickness="2"
                         two-lines
@@ -31,7 +31,7 @@
             <div class="footer">
                 <f-social-media-links></f-social-media-links>
                 <div class="copyright">
-                    <a href="https://galaxy.foundation/" target="_blank" rel="nofollow">©2021 Galaxy Foundation</a>
+                    <a href="http://icicbchain.org" target="_blank" rel="nofollow">©2021 icicbchain.org</a>
                 </div>
             </div>
         </div>
@@ -45,7 +45,9 @@
     import { mapState } from 'vuex';
     import FSearchBox from "../components/FSearchBox.vue";
     import FDarkModeSwitch from "@/components/FDarkModeSwitch.vue";
-
+    
+    const appConfig = require('../../app.config.js');
+    /* console.log('appConfig.useTestnet', appConfig.useTestnet) */
     /**
      * Renderes header and takes care of navigation.
      */
@@ -59,18 +61,20 @@
         },
 
         data() {
-            const network = window.localStorage.getItem('graphql-network');
-            let labelChangeNetwork = 'Switch to testnet'
-            let isTestnet = network!=='mainnet';
+            const isTestnet = appConfig.useTestnet
+            let labelChangeNetwork = ''
+            let urlExplorer = '';
             if (isTestnet) {
                 labelChangeNetwork = 'Switch to mainnet';
+                urlExplorer = appConfig.explorer.mainnet
             } else {
                 labelChangeNetwork = 'Switch to testnet';
+                urlExplorer = appConfig.explorer.testnet
             }
-            /* this.labelChangeNetwork = "Switch to testnet" */
             return {
                 isTestnet,
                 labelChangeNetwork,
+                urlExplorer,
                 /** Is drawer visible? */
                 dDrawerOn: false
             }

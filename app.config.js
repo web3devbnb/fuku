@@ -46,7 +46,12 @@ const appConfig = {
         outputDir: "dist"
     },
     // downtime threshold in seconds. downtime values less than this threshold will be displayed as 0
-    downtimeThreshold: 10
+    downtimeThreshold: 10,
+    explorer: {
+        mainnet: 'http://explorer.icicbchain.org',
+        testnet: 'http://testnet-rpc.icicbchain.org',
+    }
+    
 };
 
 if (appConfig.useTestnet) {
