@@ -55,10 +55,10 @@
             ul {
                 li:last-child {
                     border-radius: 20px;
-                    color:#ff1515;
-                    border: 2px solid #ff1515;
-                    box-shadow: 0px 0px 10px #ff1515;
-                    padding: 0 15px;
+                    color:white;
+                    border: 2px solid white;
+                    box-shadow: 0px 0px 10px white;
+                    padding: 0 20px;
                 }
 
             }
@@ -69,7 +69,11 @@
      nav {
             ul {
                 li:last-child {
-                    a {color:#ff1515!important;}
+                    a {color:white!important;
+                        border:none !important;
+                        padding:5px !important;
+                    }
+                    margin-left: 10px;
                 }
 
             }
@@ -79,7 +83,7 @@
    .f-navigation { 
      nav {
             ul {
-                li:last-child:hover {background: #ff1515;
+                li:last-child:hover {background: white;
                 }
 
             }
@@ -90,7 +94,7 @@
      nav {
             ul {
                 li:last-child:hover {
-                    a {color:#fff!important;}
+                    a {color:black!important;}
                 }
 
             }
@@ -115,7 +119,9 @@
                 li {
 
                     @include links() {
-                        color: var(--f-navigation-link-color);
+                        color: #6b6b6b;
+                        border-right:1px solid #6b6b6b;
+                        border-radius: 0;
                     }
                 }
             }
@@ -139,13 +145,12 @@
                         font-weight: normal;
                         //letter-spacing: normal;
                         display: inline-block;
-                        padding: 5px 10px;
+                        padding: 0px 20px;
                         text-decoration: none;
                         transition: all $transition-length ease;
-                        border-radius: $border-radius;
 
                         &.router-link-exact-active, &:hover {
-                            color: #ff1515;
+                            color: white;
                             text-decoration: none;
                         }
                     }
@@ -160,7 +165,7 @@
                 ul {
                     li {
                         @include links() {
-                            font-size: 0.9em;
+                            font-size: 14px;
                             padding-inline-start: 10px;
                             padding-inline-end: 10px;
                         }
@@ -191,7 +196,7 @@
                 ul {
                     li {
                         @include links() {
-                            font-size: 0.8em;
+                            font-size: 14px;
                             padding-inline-start: 2px;
                             padding-inline-end: 2px;
                         }

@@ -1,9 +1,12 @@
 <template>
-    <div class="assets-view narrow-container">
+<div class="assets-view">
+        <div class="narrow-container">
         <f-view-heading>
             <h1>{{ $t('view_assets.title') }}</h1>
-        </f-view-heading>
-
+        </f-view-heading>                   
+        </div>
+        
+        <div class="div-container" style="padding-top:20px">
 
         <f-tabs>
             <template #assets>
@@ -26,6 +29,7 @@
                 <erc20-asset-list @records-count="onErc20AssetsRecordsCount" />
             </f-tab>
         </f-tabs>
+        </div>
     </div>
 </template>
 

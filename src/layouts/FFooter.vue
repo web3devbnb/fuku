@@ -3,9 +3,9 @@
     <div class="narrow-container">
             <div class="row no-collapse align-items-center">
                 <div class="col-2">
-                    <router-link to="/" class="logo" :aria-label="$t('view_home.back_to_home')"><img src="/logo.svg" alt="" class="not-fluid" style="max-height:200px"></router-link>
+                    <router-link to="/" class="logo" :aria-label="$t('view_home.back_to_home')"><img src="/logo.png" alt="" class="not-fluid" style="max-height:200px"></router-link>
                 </div>
-                <div class="col right-col">
+                <div class="col" style="text-align:center">
                     <f-navigation :items="cNavigation" />
                 </div>
             </div>

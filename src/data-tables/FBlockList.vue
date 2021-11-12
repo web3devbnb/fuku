@@ -188,19 +188,7 @@
                             cursor,
                             count: this.itemsPerPage
                         },
-                        updateQuery: (previousResult, { fetchMoreResult }) => {
-                            // this.dHasNext = fetchMoreResult.blocks.pageInfo.hasNext;
-
-                            return fetchMoreResult;
-/*
-                            return {
-                                blocks: {
-                                    ...fetchMoreResult.blocks,
-                                    edges: [...previousResult.blocks.edges, ...fetchMoreResult.blocks.edges]
-                                }
-                            }
-*/
-                        }
+                        
                     });
                 }
             },

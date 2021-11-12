@@ -21,7 +21,8 @@
 
             &[aria-selected="true"] {
                 color: var(--flistbox-item-selected-color);
-                background-color: #ff1515;
+                background-color: white;
+                color:black
             }
 
             &[aria-disabled="true"] {
@@ -31,6 +32,8 @@
 
         &:not([aria-disabled="true"]) {
             .flistbox_list_item {
+                border:1px solid white;
+                margin-left: 10px;
                 &:not([aria-disabled="true"]) {
                     cursor: pointer;
 

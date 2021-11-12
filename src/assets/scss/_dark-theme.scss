@@ -59,7 +59,7 @@
             //--f-toggle-btn-background: var(--f-darker-color-3);
             --f-toggle-btn-checked-background: var(--f-darker-color-3);
             --f-toggle-btn-switch-border: 1px solid transparent;
-            --f-toggle-btn-checked-switch-background: #{$theme-color};
+            --f-toggle-btn-checked-switch-background: transparent;
             --f-toggle-btn-checked-switch-border: #{$theme-color};
         }
     }

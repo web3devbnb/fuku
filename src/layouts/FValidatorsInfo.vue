@@ -128,7 +128,8 @@
     </div>
 </template>
 <style>
-.dark-theme .deepak .f-card { background-color: #1a1a1a !important;
+.dark-theme .deepak .f-card { background-color: black !important;
+border:1px solid #272727;
 padding:20px;}.deepak .f-card { background-color: #eaeaea !important;
 padding:20px;}
 </style>

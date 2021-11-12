@@ -17,13 +17,54 @@
 
 body {
     letter-spacing: -0.5px;
+    background-image: url(/public/main-bg.png);
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 main {
     padding-top: 16px;
-    padding-bottom: 32px;
+    // padding-bottom: 32px;
 }
-
+.table-container{
+    background-color: black;
+    border:1px solid #272727;
+    border-radius: 10px;
+    th, td{
+        border-bottom: 1px solid #272727;
+    }
+    td{
+        border-right:1px solid #272727;
+        border-radius:0 !important
+    }
+    tr td:last-child{
+        border-right:none
+    }
+    th{
+        text-transform: uppercase;
+        font-weight: 100;
+        // letter-spacing: 0.4px;
+    }
+}
 @include links() {
     text-decoration: none;
 }

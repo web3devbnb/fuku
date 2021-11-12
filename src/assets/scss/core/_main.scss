@@ -12,7 +12,9 @@ body {
 }
 
 @include links() {
-    color: var(--f-link-color);
+    // color: var(--f-link-color);
+    color: white;
+
 }
 
 p {

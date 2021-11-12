@@ -1,10 +1,10 @@
 <template>
     <header class="f-header" :class="cCssClass">
-        <div class="narrow-container">
+        <div class="">
             <div class="row no-collapse align-items-center">
                 <div class="col-2">
                     <router-link to="/" class="logo" :aria-label="$t('view_home.back_to_home')">
-                        <img src="/logo.svg" alt="" class="not-fluid">
+                        <img src="/logo.png" alt="" style="margin-left:20px" class="not-fluid">
                         <b class="testnet" v-show="isTestnet">Testnet</b>
                         
                     </router-link>
@@ -47,10 +47,7 @@
     import FDarkModeSwitch from "@/components/FDarkModeSwitch.vue";
     
     const appConfig = require('../../app.config.js');
-    /* console.log('appConfig.useTestnet', appConfig.useTestnet) */
-    /**
-     * Renderes header and takes care of navigation.
-     */
+    
     export default {
         components: {
             FDarkModeSwitch,
@@ -224,7 +221,7 @@
         top: 0;
         z-index: 10;
         width: 100%;
-        height: $f-header-height;
+        // height: $f-header-height;
         color: #fff;
         background-color: #fbfcff;
         transition: height $transition-length ease;
@@ -260,7 +257,7 @@
             }
 
             > img {
-                max-height: 82px;
+                max-height: 44px;
                 margin-bottom: 0 !important;
                 transition: opacity $transition-length ease;
             }
@@ -323,7 +320,7 @@
             //text-align: end;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: center;
 
             .f-navigation {
                 margin-inline-end: 16px;
@@ -332,6 +329,7 @@
 
         .f-dark-mode-switch {
             margin-inline-end: 16px;
+            margin-left: 50px;
         }
 
         &.drawer-on {
@@ -370,7 +368,7 @@
                 z-index: 11;
 
                 > img {
-                    max-height: 55px;
+                    max-height: 30px;
                 }
             }
 
