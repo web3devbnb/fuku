@@ -308,11 +308,7 @@ text-shadow: 0px 1px 1px #000;}
  background:#fafafa;
  box-shadow:none;   
 }
-.div-container{
-    padding:7%;
-    padding-top:100px;
-    background-color:rgba(0,0,0,0.7);
-}
+
 .col-6{
     width:50%;
 }
@@ -461,6 +457,10 @@ align-self: center;
         .col-6{
             width:100% !important;
             flex-basis:1 !important
+        }
+        .f-search-box {
+            bottom: -24px !important;
+            //padding: 64px 0;
         }
         .f-footer {
             .row{

@@ -124,6 +124,9 @@
                         border-radius: 0;
                     }
                 }
+                li:nth-child(6) a{
+                    border-right:none !important
+                }
             }
         }
     }

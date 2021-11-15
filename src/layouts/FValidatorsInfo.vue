@@ -5,7 +5,7 @@
             <div class="row f-data-layout equal-height no-vert-col-padding collapse-md deepak">
                 <div class="col margin-bottom-menu">
                     <f-card>
-                        <h2>{{ $t('view_validators_info.staking_summary') }}</h2>
+                        <h2 style="border-bottom:1px solid #272727; padding-bottom:10px">{{ $t('view_validators_info.staking_summary') }}</h2>
 <hr>
                         <div class="row no-collapse">
                             <div class="col-5 f-row-label">{{ $t('view_validators_info.total_self_staked') }}</div>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="col">
                     <f-card>
-                        <h2>{{ $t('view_validators_info.last_epoch') }}</h2>
+                        <h2 style="border-bottom:1px solid #272727; padding-bottom:10px">{{ $t('view_validators_info.last_epoch') }}</h2>
 <hr>
                         <div class="row no-collapse">
                             <div class="col-5 f-row-label">{{ $t('view_validators_info.epoch_number') }}</div>

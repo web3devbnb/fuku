@@ -45,6 +45,14 @@ main {
     padding-top: 16px;
     // padding-bottom: 32px;
 }
+.row{
+    margin: 0 !important
+}
+.div-container{
+    padding:7%;
+    padding-top:100px;
+    background-color:rgba(0,0,0,0.7);
+}
 .table-container{
     background-color: black;
     border:1px solid #272727;
@@ -277,6 +285,12 @@ form {
         > h2 {
             margin-bottom: 16px;
         }
+    }
+    .div-container{
+        padding:2%
+    }
+    .table-container{
+        padding:10px
     }
 }
 

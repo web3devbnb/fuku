@@ -14,7 +14,7 @@
                         :items="cNavigation"
                     ></f-navigation>
                     <f-dark-mode-switch ref="darkModeSwitch" />
-                    <f-search-box ref="searchBox" class="small" expandable v-show="!cHomeView"></f-search-box>
+                    <!-- <f-search-box ref="searchBox" class="small" expandable v-show="!cHomeView"></f-search-box> -->
                     <a class="ch-network" v-bind:href="urlExplorer" v-on:click="changeNetwork">{{ labelChangeNetwork }}</a>
                     <f-hamburger-switch
                         thickness="2"
@@ -43,7 +43,7 @@
     import FHamburgerSwitch from "../components/FHamburgerSwitch.vue";
     import FSocialMediaLinks from "../components/FSocialMediaLinks.vue";
     import { mapState } from 'vuex';
-    import FSearchBox from "../components/FSearchBox.vue";
+    // import FSearchBox from "../components/FSearchBox.vue";
     import FDarkModeSwitch from "@/components/FDarkModeSwitch.vue";
     
     const appConfig = require('../../app.config.js');
@@ -51,7 +51,7 @@
     export default {
         components: {
             FDarkModeSwitch,
-            FSearchBox,
+            // FSearchBox,
             FNavigation,
             FHamburgerSwitch,
             FSocialMediaLinks

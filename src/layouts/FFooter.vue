@@ -2,7 +2,7 @@
     <footer class="f-footer">
     <div class="narrow-container">
             <div class="row no-collapse align-items-center">
-                <div class="col-2">
+                <div class="">
                     <router-link to="/" class="logo" :aria-label="$t('view_home.back_to_home')"><img src="/logo.png" alt="" class="not-fluid" style="max-height:200px"></router-link>
                 </div>
                 <div class="col" style="text-align:center">
